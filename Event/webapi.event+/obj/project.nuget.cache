@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vJiJgG09tnGIOwZIDuTFhJnxhikAKhwrTDkyxF0kGE9l/U/QEtJFbEU2WG3ZWO7XmnWBoxEQ9ojnyysFDNQMcA==",
+  "dgSpecHash": "WXu9qb87oVjPfRPPrW+Hvr7zI6KRKu4+TLaEb5LMUZ9Dy+V1iY8/ESECvmPjhkQ5DpdcCOXdAP6pPvV5ZFzzeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46291995867\\Desktop\\apiEventPlus\\2023-1S-2D\\sprint-2-api\\Event+\\webapi.event+\\webapi.event+.csproj",
+  "projectFilePath": "C:\\Users\\46291995867\\Desktop\\apiEventPlus\\Event\\webapi.event+\\webapi.event+.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46291995867\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\46291995867\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

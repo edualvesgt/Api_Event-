@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BCrypt.Net;
+using Microsoft.EntityFrameworkCore;
 using webapi.event_.Domains;
 
 namespace webapi.event_.Contexts
@@ -16,7 +17,7 @@ namespace webapi.event_.Contexts
 
         public DbSet<Evento> Evento { get; set; }
 
-        public DbSet<ComentariosEvento> ComentariosEvento{ get; set; }
+        public DbSet<ComentariosEvento> ComentariosEvento { get; set; }
 
         public DbSet<Instituicao> Instituicao { get; set; }
 
@@ -28,8 +29,15 @@ namespace webapi.event_.Contexts
         /// <param name="optionsBuilder">Objeto com as configurações definidas</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server= NOTE15-S15; Database=event+; User Id = sa; pwd = Senai@134; TrustServerCertificate=true;");
+            //String de Conexao do SQL Server 
+            //optionsBuilder.UseSqlServer("Server= NOTE15-S15; Database=event+; User Id = sa; pwd = Senai@134; TrustServerCertificate=true;");
+            //base.OnConfiguring(optionsBuilder);
+
+            //String De Conexao do Azure
+
+            optionsBuilder.UseSqlServer("Server=tcp:eventplus--server.database.windows.net,1433;Initial Catalog=eventPlusDataBase;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User Id = eventplus--server; pwd = Senai@134");
             base.OnConfiguring(optionsBuilder);
+           
         }
     }
 }
