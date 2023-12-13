@@ -146,6 +146,9 @@ namespace webapi.event_.Repositories
                     {
                         Descricao = c.Descricao,
                         Exibe = c.Exibe,
+                        IdEvento= c.IdEvento,
+                        IdComentarioEvento= c.IdComentarioEvento,
+                        IdUsuario = c.IdUsuario,
 
                         Usuario = new Usuario
                         {
@@ -154,6 +157,7 @@ namespace webapi.event_.Repositories
 
                         Evento = new Evento
                         {
+                            IdEvento = c.IdEvento,
                             NomeEvento = c.Evento!.NomeEvento,
                         }
 

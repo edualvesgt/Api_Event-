@@ -42,7 +42,7 @@ namespace webapi.event_.Controllers
                 }
 
                 // Converte a descrição do comentário em um fluxo de bytes para moderação
-                using var stream = new MemoryStream(Encoding.UTF8.GetBytes(novoComentario.Descricao));
+                using var stream = new MemoryStream(Encoding.UTF8.GetBytes(novoComentario.Descricao!));
 
                 // Realiza a moderação de texto utilizando o Content Moderator da Azure
                 var moderationResult = await _contentModeratorClient.TextModeration.
@@ -100,7 +100,7 @@ namespace webapi.event_.Controllers
         }
 
 
-        [HttpGet("BuscarPorIdUsuario/{id}")]
+        [HttpGet("BuscarPorIdUsuario")]
 
         public IActionResult GetByIdUser(Guid idAluno, Guid idEvento)
         {
