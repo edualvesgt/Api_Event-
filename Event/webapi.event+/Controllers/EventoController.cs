@@ -43,6 +43,18 @@ namespace webapi.event_.Controllers
                 return BadRequest(e.Message);
             }
         }
+        [HttpGet("ListarAntigos")]
+        public IActionResult GetOldEvents()
+        {
+            try
+            {
+                return Ok(_eventoRepository.ListarAntigos());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)

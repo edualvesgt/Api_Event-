@@ -182,6 +182,18 @@
         }
       }
     },
+    "/api/Evento/ListarAntigos": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Evento/{id}": {
       "get": {
         "tags": [
