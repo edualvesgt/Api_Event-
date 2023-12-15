@@ -161,7 +161,7 @@ namespace webapi.event_.Repositories
                             NomeEvento = c.Evento!.NomeEvento,
                         }
 
-                    }).Where(c => c.Exibe == true ).ToList();
+                    }).Where(c => c.Exibe == true).ToList();
             }
             catch (Exception)
             {
